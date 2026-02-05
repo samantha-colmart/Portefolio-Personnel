@@ -1,0 +1,172 @@
+/* =======================
+   FICHIER : css/style.css – Palette violet / vert (Joker) ajustée
+======================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #2b2b50; /* violet plus clair */
+  color: #e5e7eb;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ===== HERO ===== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(135deg, #6a0dad, #00ff6a); /* violet -> vert */
+  color: #ffffff;
+}
+.hero h1 span {
+  color: #6a0dad; /* prénom en violet */
+}
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.6rem;
+  background: #00ff6a;
+  color: #1a1a2e;
+  border-radius: 6px;
+  font-weight: 700;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.btn:hover {
+  transform: translateY(-3px);
+  opacity: 0.9;
+}
+
+section {
+  padding: 4rem 0;
+}
+
+h2 {
+  margin-bottom: 2rem;
+  color: #6a0dad;
+  text-align: center;
+}
+
+/* ===== GRID ===== */
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* ===== SKILLS LAYOUT ===== */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.skills-group h3 {
+  margin-bottom: 1rem;
+  color: #00ff6a;
+  font-weight: 600;
+  text-align: center;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: center;
+}
+
+/* ===== CARDS ===== */
+/* Compétences : style classe et aligné */
+.card {
+  background: rgba(255,255,255,0.05);
+  padding: 0.6rem 1rem;
+  border-radius: 999px; /* pill shape */
+  border: 1px solid rgba(255,255,255,0.15);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  color: #e5e7eb;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
+/* Projets : restent en cadres plus grands */
+
+.project {
+  background: #2b2b44;
+  padding: 1.5rem;
+  border-radius: 6px;
+  border: 2px solid #00ff6a;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 380px; /* plus grand pour le texte */
+}
+
+.project img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.project a {
+  margin-top: auto;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #6a0dad;
+  color: #ffffff;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+.project a:hover {
+  background: #00ff6a;
+  color: #1a1a2e;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #2b2b50;
+  color: #b5b5b5;
+}
+
+/* ===== CONTACT ===== */
+.contact p {
+  text-align: center;
+  font-weight: 500;
+  color: #e5e7eb;
+}
+
+.contact a {
+  color: #00ff6a;              /* vert élégant */
+  font-weight: 600;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  transition: opacity 0.2s ease;
+}
+
+.contact a:hover {
+  opacity: 0.8;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 projets par ligne */
+  }
+}
